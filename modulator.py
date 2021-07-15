@@ -1,5 +1,4 @@
 # import pyparsing
-# import getopt
 import argparse
 import sys
 
@@ -12,8 +11,8 @@ input_file=''
 pitch_interval=0
 
 def get_input_arguments():
-    # Initialize parser
     parser = argparse.ArgumentParser()
+
     parser.add_argument("-i","--input",help="input key",type=str)
     parser.add_argument("-o","--output",help="output key",type=str)
     parser.add_argument("-f","--file",help="input file",type=str)
@@ -26,14 +25,14 @@ def get_input_arguments():
     output_key=args.output
     input_file=args.file
 
-
-
 def parse_line():
     pass
 
 def parse_input():
+    f=open(input_file,'r')
+    for line in f.readlines():
+        print(line,end="")
 
-    pass
 
 def modulation():
     # get input
@@ -44,14 +43,8 @@ def modulation():
 
     # modulation
     
-    pass
 
 
 if __name__ == "__main__":
     modulation()
 
-    print(input_key)
-    print(output_key)
-    print(input_file)
-
-    pass
